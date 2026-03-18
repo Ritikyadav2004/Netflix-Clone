@@ -7,6 +7,9 @@ A pixel-perfect, fully responsive **Netflix India** landing page clone built wit
 ## 🖼️ Preview
 
 ![Netflix Clone Preview](Media/Rd1.png)
+![Netflix Clone Preview](Media/Rd2.png)
+![Netflix Clone Preview](Media/Rd3.png)
+![Netflix Clone Preview](Media/Rd4.png)
 
 ---
 
