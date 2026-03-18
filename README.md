@@ -6,12 +6,7 @@ A pixel-perfect, fully responsive **Netflix India** landing page clone built wit
 
 ## 🖼️ Preview
 
-<!-- Replace the path below with your actual screenshot image once you add it to the repo -->
-<!-- Example: ![Netflix Clone Preview](Media/preview.png) -->
-
-> 📸 Add your screenshot here!
-> Place a screenshot named `Rd1.png` inside the `Media/` folder and replace this note with:
-> `![Netflix Clone Preview](Media/Rd1.png)`
+![Netflix Clone Preview](Media/Rd1.png)
 
 ---
 
