@@ -1,0 +1,856 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Netflix Sans', Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url('Media/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+/* Responsiveness for different screen sizes */
+@media (max-width: 1024px) {
+  body {
+    background-position: top center;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: contain;
+    background-position: center top;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+}
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+/* Header */
+header {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  height: 46px;
+  width: auto;
+  max-width: 154px;
+}
+
+/* Language Selector */
+.language {
+  border: 1px solid rgb(145, 145, 145);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+/* Sign-in Button */
+.signIn {
+  background-color: rgb(255, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 6px 16px;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+}
+
+.signIn:hover {
+  background-color: #e50914;
+}
+
+/* ------------------------------ */
+/* RESPONSIVE DESIGN */
+/* ------------------------------ */
+
+/* Tablets */
+@media (max-width: 992px) {
+  header {
+    height: 80px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .language, .signIn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .language, .signIn {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  .logo {
+    height: 36px;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+/* Action Bar */
+.actionBar {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 2%;
+  flex-wrap: wrap;
+}
+
+/* Language Selector Group */
+.langElement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.langIcon {
+  height: 20px;
+  padding: 2px;
+  margin: 2px;
+}
+
+.downArrow {
+  margin-left: 10px;
+}
+
+/* Headings */
+h3 {
+  color: white;
+  padding: 2px;
+  font-weight: 100;
+  text-align: center;
+}
+
+/* Main Section */
+main {
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5%;
+  background-repeat: no-repeat;
+  flex-direction: column;
+}
+
+/* Tagline Section */
+.MainTagLine {
+  width: 60%;
+  max-width: 700px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Paragraph */
+p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+/* Email Input */
+.email {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 45px;
+  width: 345px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  color: white;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.email:focus {
+  border-color: red;
+  opacity: 0.8;
+}
+
+.email::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Caption Button */
+.caption {
+  border-radius: 5px;
+  width: 200px;
+  border: none;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.caption:hover {
+  background-color: #e50914;
+}
+
+/* ------------------------------ */
+/* RESPONSIVE DESIGN */
+/* ------------------------------ */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .MainTagLine {
+    width: 80%;
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .email {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .caption {
+    width: 60%;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .MainTagLine {
+    width: 90%;
+    font-size: 1.4rem;
+  }
+
+  .actionBar {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .email {
+    width: 90%;
+  }
+
+  .caption {
+    width: 80%;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+/* Info Links Section */
+.information {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: center;
+}
+
+.text {
+  cursor: pointer;
+  color: #ccc;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.text:hover {
+  color: #fff;
+}
+
+/* Footer Base */
+footer {
+  position: relative;
+  color: white;
+  width: 100%;
+  min-height: 100vh;
+  background: url("Media/black.jpg") center/cover no-repeat;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 60px;
+  overflow: hidden;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+/* Divider Line */
+.netflix-divider {
+  position: relative;
+  width: 95%;
+  height: 4px;
+  margin: 60px auto;
+  background: linear-gradient(to right, transparent, #ff000d, transparent);
+  border-radius: 50px;
+  transform: scaleY(1.6) rotateX(25deg);
+  box-shadow: 0 0 15px #e50914;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+/* Movie Section */
+.movie {
+  position: relative;
+  width: 80%;
+  min-height: 300px;
+  color: white;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+/* Trending Section */
+.trending {
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e50914;
+  z-index: 2;
+}
+
+/* ------------------------------ */
+/* RESPONSIVE DESIGN */
+/* ------------------------------ */
+
+/* Tablets */
+@media (max-width: 992px) {
+  footer {
+    padding-top: 40px;
+  }
+
+  .movie {
+    width: 90%;
+    gap: 20px;
+  }
+
+  .trending {
+    font-size: 1.3rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  footer {
+    padding-top: 30px;
+    min-height: auto;
+  }
+
+  .information {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .movie {
+    flex-direction: column;
+    text-align: center;
+    width: 95%;
+  }
+
+  .trending {
+    font-size: 1.1rem;
+    justify-content: center;
+  }
+
+  .netflix-divider {
+    margin: 40px auto;
+    width: 90%;
+  }
+}
+/* Movie Title Text */
+.textMovie {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 145px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  z-index: 2;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Movie Container */
+.parentMovie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  width: 100%;
+  padding: 30px 0;
+  z-index: 2;
+}
+
+/* Movie Box */
+.box {
+  width: 12.5em;
+  height: 17em;
+  background-color: #e50914;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+/* Movie Poster */
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 2;
+}
+
+/* ------------------------------ */
+/* RESPONSIVE DESIGN */
+/* ------------------------------ */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .textMovie {
+    padding-left: 60px;
+    font-size: 1.3rem;
+  }
+
+  .box {
+    width: 10em;
+    height: 14em;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .textMovie {
+    position: static;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .parentMovie {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .box {
+    width: 80%;
+    max-width: 250px;
+    height: auto;
+    aspect-ratio: 3/4;
+  }
+}
+/* WHY JOIN SECTION */
+.whyJoin {
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  margin: 25px 0 8px 0;
+  padding: 0 5%;
+  color: #fff;
+  z-index: 2;
+}
+
+/* Section Heading */
+.reasonText {
+  width: 100%;
+  max-width: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 145px;
+  position: relative;
+  bottom: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+/* Parent Container */
+.parentReason {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px 5%;
+  z-index: 2;
+}
+
+/* Reason Box */
+.rbox {
+  width: 255px;
+  height: 230px;
+  background: linear-gradient(135deg, #0a0618 0%, #1a1238 60%, #5a144f 100%);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rbox:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+/* Title Text */
+.Rtext {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Description Text */
+.ptag {
+  color: grey;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Image in Box */
+.innerImage,
+#box2 {
+  width: 72px;
+  object-fit: contain;
+  margin: 0 10px 10px 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* ------------------------------ */
+/* RESPONSIVE DESIGN */
+/* ------------------------------ */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .reasonText {
+    padding-left: 60px;
+    font-size: 1.5rem;
+  }
+
+  .rbox {
+    width: 220px;
+    height: 200px;
+  }
+
+  .Rtext {
+    font-size: 1.4rem;
+  }
+
+  .ptag {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .whyJoin {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .reasonText {
+    position: static;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .parentReason {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .rbox {
+    width: 85%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .innerImage,
+  #box2 {
+    width: 60px;
+  }
+}
+.footer1 {
+  position: relative;
+  color: white;
+  width: 100%;
+  min-height: 100vh;
+  background: url("Media/black.jpg") center/cover no-repeat;
+  z-index: 0;
+}
+
+.footer1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.question,
+.faqsbox {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: white;
+  z-index: 2;
+}
+
+.faqbox1 {
+  background-color: rgb(45, 44, 44);
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 6px;
+  flex-wrap: wrap;
+  transition: 0.2s ease-in-out;
+}
+
+.faqbox1:hover {
+  background-color: rgb(65, 64, 64);
+  cursor: pointer;
+}
+
+.addlogo {
+  height: 35px;
+  margin-right: 15px;
+}
+
+.ready {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 70px;
+  flex-wrap: wrap;
+}
+
+.footer1id {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputFeild {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.a1 {
+  height: 50px;
+  width: 90%;
+  max-width: 600px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer_container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer_column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+  min-width: 150px;
+}
+
+.footer_column a {
+  color: rgb(200, 191, 191);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.footer_column a:hover {
+  text-decoration: underline;
+}
+
+.lastElement {
+  margin: 60px auto 0;
+  height: 15px;
+  width: fit-content;
+  padding: 10px 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid grey;
+  cursor: pointer;
+  display: flex;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .faqbox1 {
+    font-size: 0.95rem;
+  }
+
+  .a1 {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .question, .faqsbox {
+    padding-left: 0;
+    width: 95%;
+  }
+
+  .faqbox1 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .addlogo {
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  .footer_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer1 {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .a1 {
+    width: 95%;
+  }
+
+  .footer_column a {
+    font-size: 14px;
+  }
+
+  .faqbox1 {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}

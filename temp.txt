@@ -1,0 +1,10 @@
+ body {
+  margin: 0;
+  height: 82.5vh;                       /* full screen height */
+  background-image: url('Media/bg1.jpg');
+  background-size: cover;               /* image fit full screen */
+  background-position: center;
+  
+  background-repeat: no-repeat;
+font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+}

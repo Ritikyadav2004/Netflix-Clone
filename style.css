@@ -1,0 +1,600 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Netflix Sans', Arial, sans-serif;
+}
+body {
+  margin: 0;
+  
+  height: 83vh;
+  
+  background-image: url('Media/background.jpg'); /* <-- This is the NEW line */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;                        /* full screen */
+  background: rgba(0, 0, 0, 0.8);  /* black + 50% opacity */
+  z-index: -1;                     /* behind content */
+}
+
+header{
+    height: 90px;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+        /* margin-top: 15px; */
+}
+nav{
+    
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    /* background-color: rgb(103, 103, 104); */
+    display: flex ;
+    
+   
+    
+
+}
+
+.logo
+{
+    height: 46px;
+    width: 154px;
+    
+}
+.language
+{
+    height: 10px;
+    width: 122px;
+    border: 1px solid rgb(145, 145, 145);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-size: 16px;
+    padding: 10px;
+
+    
+}
+.signIn
+{
+    height: 31px;
+    min-width: 80px;
+    background-color: rgb(255, 0, 0);
+    float: left;
+    margin-left: 10px;
+     display:flex;
+    justify-content: center;
+    align-items: center;
+     border-radius: 3px;
+     color: rgb(255, 255, 255);
+     font-weight: 700 ;
+     font-size: 20px;
+     cursor: pointer;
+
+
+}
+
+.actionBar
+{
+    display: flex;
+    width: 100%;
+    margin-left : 5px;
+    justify-content: flex-end;
+
+    
+
+}
+
+.langElement
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.langIcon
+{
+    height: 20px;
+    padding: 2px;
+    margin: 2px;
+}
+
+.downArrow
+{
+    margin-left: 15px;
+    
+}
+
+h3{
+    color: white;
+    padding: 2px;
+    font-weight: 100;
+}
+
+main
+{
+    height: 90%;
+    width: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+
+}
+.MainTagLine
+{
+    height: 45vh;
+    width: 44vw;
+    /* background-color: blueviolet; */
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    
+}
+p{
+    font-size: 20px;
+    font-weight: 100;
+    
+}
+
+.email
+{
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    width: 345px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 10px;
+    opacity: 0.5;
+    color: white;
+   
+
+}
+input
+{
+    background-color: black;
+    
+}
+.email::placeholder {
+  color: rgb(255, 255, 255);         /* your desired color */
+    
+  background-color: black;      /* ensure it's fully visible */
+}
+
+.caption
+{
+    border-radius: 5px;
+    width: 200px;
+    border: none;
+background-color: red;   
+display: flex; 
+justify-content: center;
+align-items: center;
+gap: 10px;
+font-weight: 700;
+color:white;
+
+}
+.information
+{   
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    
+}
+.text
+{
+    cursor: pointer;
+}
+
+footer{
+  position: relative;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  background: url("Media/black.jpg");  /*center/cover no-repeat; */
+  z-index: 0; /* create base layer */
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8); /* dark overlay */
+  z-index: 1; /* sits on top of image but below boxes */
+}
+
+
+.netflix-divider {
+  width: 99%;
+  height: 4px; /* ❌ space hatao — '40 px' wrong, correct: '40px' */
+ margin-top: 100px;
+  background: linear-gradient(to right, transparent, #ff000d, transparent);
+  border-radius: 50px;
+  transform: scaleY(1.5); /* thoda arc-like stretch */
+  transform: scaleY(1.8) rotateX(25deg);
+  box-shadow: 0 0 15px #e50914;
+  opacity: 0.9;
+}
+
+
+
+.movie
+{
+    width: 80%;
+    height: 300px;
+    /* background-color: white; */
+    color: black;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.trending
+{    
+     height: 60px;
+    /* background-color: aquamarine; */
+    bottom: 0;  
+    display: flex;
+    justify-content: start;
+    position: relative;
+}
+.textMovie
+{
+    width: 85%;
+    /* background-color: blue; */
+    display: flex;
+    position: absolute;
+    padding-left: 145px;
+    bottom: 0;
+    color: white;
+    z-index: 2;
+   
+
+    
+}
+
+.parentMovie
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box
+{
+    width: 12.5em;
+    height: 17em;
+    background-color: #e50914;
+    border: none;
+    border-radius: 10px;
+    margin-top: 25px;
+    position: relative;
+    transition: all 0.3s ease-in-out
+    
+}
+
+.box:hover{
+    width: 13.5em;
+    height: 18em;
+}
+.box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+     border-radius: 10px;
+     z-index: 2;
+}
+
+
+
+.whyJoin
+{
+    height: 60px;
+    /* background-color: aquamarine; */
+    bottom: 0;  
+    display: flex;
+    justify-content: start;
+    position: relative;
+    margin-bottom: 8px;
+    margin-top: 25px;
+}
+
+.reasonText
+{
+    width: 68em;
+    /* background-color: blue; */
+    display: flex;
+    position: absolute;
+    padding-left: 145px;
+    bottom: 0;
+    color: white;
+    z-index: 2;
+}
+
+.parentReason
+{
+    width: 100%;
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    
+}
+.rbox
+{   
+    width: 255px;
+   
+    margin-top: 5px;
+    height: 230px;
+    
+    justify-content: start;
+    /* background: radial-gradient(circle at 20% 50%, #1b0e3d, #0d0b1f 70%);
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #592e83 100%);
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 60%, #7a1fa2 100%);
+background: linear-gradient(135deg, #0f0c29 0%, #302b63 60%, #a22c6f 100%); */
+background: linear-gradient(135deg, #0a0618 0%, #1a1238 60%, #5a144f 100%);
+
+
+
+
+
+
+    z-index: 2;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+}
+
+.Rtext
+{
+    font-size: 26px;
+    
+}
+
+.ptag
+{
+    color: grey;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.innerImage
+{
+    width: 72px;
+    object-fit: contain;
+    margin: 0px 10px 10px 0px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#box2
+{
+    width: 68px;
+    object-fit: contain;
+    margin: 0px 10px 10px 0px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+
+
+
+.footer1{
+  
+  position: relative;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  background: url("Media/black.jpg");  /*center/cover no-repeat; */
+  z-index: 0; /* create base layer */
+ 
+
+} */
+
+.footer1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8); /* dark overlay */
+  z-index: 1; /* sits on top of image but below boxes */
+}
+
+.question
+{
+    width: 68em;
+    /* background-color: blue; */
+    display: flex;
+   /* margin-top: 55px; */
+    padding-left: 145px;
+    bottom: 0;
+    color: white;
+    z-index: 2;
+    margin-bottom: 10px;
+}
+
+.Faqs
+{
+     height: 60px;
+    /* background-color: aquamarine; */
+    bottom: 0;  
+    /* display: flex; */
+    justify-content: start;
+    position: relative;
+    margin-bottom: 8px;
+    
+}
+
+.faqsbox
+{
+    width: 68em;
+    /* background-color: blue; */
+   
+    margin-top: 18px;
+    padding-left: 145px;
+    bottom: 0;
+    color: white;
+    z-index: 2;
+}
+
+
+.faqbox1
+{
+    height: 5.1em;
+    width: 77.5em;
+    background-color: rgb(45, 44, 44);
+    margin-top: 10px;
+    /* padding: 20px 0 0 20px;  */
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    
+    
+    
+}
+.addlogo
+{
+   margin-right: 20px;
+   height: 40px;
+
+    
+}
+
+.faqbox1:hover{
+    background-color: rgb(65, 64, 64);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.allboxes
+{
+    flex-direction: column;
+    
+    
+}
+
+.ready
+{   
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top:70px ;
+    /* margin-left: 80px; */
+}
+
+
+
+.footer1id
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.inputFeild
+{
+   margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+
+
+
+.a1
+{
+    height: 52px;
+    width: 682px;
+    
+}
+
+/* .footerContainer
+{   
+    display: flex;
+    justify-content: space-between;
+} */
+
+.b1 a
+{
+    flex-direction: column;
+}
+
+
+
+.footer_container
+{  
+   margin-top: 50px;
+   
+   
+   display: flex;
+   justify-content: space-between;
+   height: fit-content;
+   
+   
+}
+.footer_column
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+
+    
+    
+}
+.footer_column a{
+    color: rgb(200, 191, 191);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+.lastElement
+{
+    margin-top:60px ;
+    height: 15px;
+    width: 110px;
+    display: flex;
+     padding: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid grey;
+    cursor: pointer;
+    
+
+}
+
+
+
+
+.caption
+{
+     cursor: pointer;
+}
